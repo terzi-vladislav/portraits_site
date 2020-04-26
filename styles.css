@@ -1,5 +1,5 @@
 body {
-    background-color: #E2E2E2;
+    background: linear-gradient(#E2E2E2, #FFFFFF);
     margin: 0;
     padding: 0;
 }
@@ -23,10 +23,10 @@ body {
 
 @keyframes appearing_header {
     0%{
-        color: #E2E2E2;
+        opacity: 0;
     }
     100%{
-        color: #000000;
+        opacity: 1;
     }
 }
 
@@ -61,7 +61,6 @@ body {
     position: absolute;
     left: 65%;
     transform-origin: top center;
-    transform: translate(-18px, 0) rotate(-30deg);
     animation: moving_pen 3s ease-out 1 normal 0s forwards;
 }
 
@@ -77,7 +76,7 @@ body {
         -webkit-filter: drop-shadow(0px 7px 15px rgba(0, 0, 0, 0.6));
         filter: drop-shadow(0px 7px 15px rgba(0, 0, 0, 0.6));
         opacity: 100%;
-        transform: translate(-18px, 0) rotate(-30deg);
+        transform: translate(-18px, 0) rotate(-35deg);
         left: 65%;
     }
 }
@@ -88,11 +87,12 @@ body {
     font-weight: bold;
     font-size: 28px;
     line-height: 42px;
-    color: #000000;
+    color: #E2E2E2;
     width: 488px;
+    opacity: 0;
     transform-origin: top left;
     transform: rotate(90deg) translate(160px, -41px);
-    animation: appearing_header 1s 1 reverse 2s forwards;
+    animation: appearing_header 1s 1 normal 2s forwards;
 }
 
 .description {
@@ -102,7 +102,8 @@ body {
     font-weight: bold;
     font-size: 36px;
     line-height: 44px;
-    color: #E2E2E2;
+    color: #000000;
+    opacity: 0;
     margin-left: 2vw;
     animation: appearing_header 2s 1 normal 1s forwards;
     position: absolute;
@@ -119,7 +120,34 @@ body {
     text-align: right;
     width: 183px;
     position: absolute;
-    right: 40%;
+    color: #000000;
+    top: 65%;
+    right: 23%;
+    opacity: 0;
+    animation: finest_appear 2s 1 normal 3s forwards;
+}
+
+.yellow {
+    color: #FFC700;
+    animation: finest_appear_yellow 2.5s 1 normal 3s forwards;
+}
+
+@keyframes finest_appear {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+@keyframes finest_appear_yellow {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
 }
 
 .cap {
@@ -129,10 +157,10 @@ body {
     background-repeat: no-repeat;
     background-size: contain;
     position: absolute;
-    top: 60%;
-    left: 50%;
+    top: 46%;
+    left: 58%;
     opacity: 0;
-    animation: cap_animation 2s 1 normal 2s forwards;
+    animation: cap_animation 1s 1 normal 3s forwards;
 }
 
 @keyframes cap_animation {
