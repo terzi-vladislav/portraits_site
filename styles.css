@@ -772,6 +772,7 @@ body {
 .jenya_photo {
     width: 52.5vh;
     height: 70vh;
+    border-radius: 10px;
 
     background-image: url("Assets/Photos/Jenya.jpg");
     background-repeat: no-repeat;
@@ -854,6 +855,7 @@ body {
 .main_painting {
     width: 52.5vh;
     height: 70vh;
+    border-radius: 10px;
 
     background-image: url("Assets/Paint_portraits/Jenya.JPG");
     background-repeat: no-repeat;
