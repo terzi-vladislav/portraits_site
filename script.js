@@ -174,7 +174,6 @@ for (let i = 0; i < clickable_photos.length; i++) {
         () =>
         {
             clickable_photos[i][1] = true;
-            console.log("clicked", i);
         });
 }
 
@@ -185,3 +184,20 @@ for (let i = 0; i < clickable_photos.length; i++) {
 //             AddHoverEvent(i);
 //         });
 // }
+
+function showPhotoFullscreen() {
+    let modal = document.getElementsByClassName('jenya_popup')[0];
+    modal.style.display = "flex";
+    modal.style.animation = "popup_animation 1s forwards";
+
+    modal.onclick = () => {
+        modal.style.animation = "popup_animation_close 1s forwards";
+    }
+}
+
+let main_photo = document.getElementById('main_painting');
+
+main_photo.addEventListener('click',
+    () => {
+        showPhotoFullscreen();
+    });
