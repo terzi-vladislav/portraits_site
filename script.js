@@ -112,7 +112,7 @@ window.addEventListener('scroll',
 
             let distance = elements[i].getBoundingClientRect().top;
 
-            if (window.innerHeight * .6 > distance) {
+            if (window.innerHeight * .7 > distance) {
                 elements[i].style.animationDelay = (i % 3) * .25 + "s";
                 elements[i].style.animationPlayState = "running";
             }
@@ -124,3 +124,64 @@ window.addEventListener('scroll',
             }
         }
     });
+
+let clickable_photos = [
+    [
+        document.getElementById('alex'),
+        false
+    ],
+    [
+        document.getElementById('denis'),
+        false
+    ],
+    [
+        document.getElementById('toma'),
+        false
+    ],
+    [
+        document.getElementById('queen'),
+        false
+    ],
+    [
+        document.getElementById('mom'),
+        false
+    ],
+    [
+        document.getElementById('marina'),
+        false
+    ],
+    [
+        document.getElementById('main_painting'),
+        false
+    ]
+];
+
+// function AddHoverEvent(i) {
+//     hover_photos[i][0].addEventListener('mouseover',
+//         () => {
+//             hover_photos[i][0].style.animation = 'none';
+//             hover_photos[i][0].offsetHeight;
+//             hover_photos[i][0].style.animation = null;
+//             hover_photos[i][0].style.animation = "magnify 2s 1 normal forwards";
+//             hover_photos[i][0].style.cursor = "pointer";
+//         });
+// }
+//
+// let hover_photos = clickable_photos;
+//
+for (let i = 0; i < clickable_photos.length; i++) {
+    clickable_photos[i][0].addEventListener('click',
+        () =>
+        {
+            clickable_photos[i][1] = true;
+            console.log("clicked", i);
+        });
+}
+
+// for (let i = 0; i < hover_photos.length; i++) {
+//     clickable_photos[i][0].addEventListener('animationend',
+//         () =>
+//         {
+//             AddHoverEvent(i);
+//         });
+// }
