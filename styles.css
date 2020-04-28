@@ -776,7 +776,6 @@ body {
 
     background-image: url("Assets/Photos/Jenya.jpg");
     background-repeat: no-repeat;
-    background-size: contain;
 
     margin: 0;
 
@@ -920,13 +919,200 @@ body {
     }
 }
 
+/*=====================================================================================================================*/
+/*===============================================FOURTH PAGE 4=========================================================*/
+/*=====================================================================================================================*/
 
+/*===============================================FiRST ROW SECTION=====================================================*/
 
+.first_row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
 
+/*===============================================SECOND ROW SECTION====================================================*/
 
+.second_row {
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
 
+/*===============================================ALYOUSHA SECTION======================================================*/
 
+.alex {
+    width: 30vh;
+    height: 40vh;
+    border-radius: 5px;
 
+    background-image: url("Assets/Paint_portraits/Lyousha.JPG");
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    margin: 5vh;
+
+    opacity: 0;
+    background-position: center;
+
+    box-shadow:
+            0 3px 2px rgba(0, 0, 0, 0.034),
+            0 7px 5px rgba(0, 0, 0, 0.048),
+            0 13px 10px rgba(0, 0, 0, 0.06),
+            0 22px 18px rgba(0, 0, 0, 0.072),
+            0 42px 33px rgba(0, 0, 0, 0.086),
+            0 100px 80px rgba(0, 0, 0, 0.12);
+
+    animation: painting 3s 1 paused 0s forwards;
+}
+
+/*===============================================DENIS SECTION=========================================================*/
+
+.denis {
+    width: 30vh;
+    height: 40vh;
+    border-radius: 5px;
+
+    background-image: url("Assets/Paint_portraits/Denis.JPG");
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    margin: 5vh;
+
+    opacity: 0;
+    background-position: center;
+
+    box-shadow:
+            0 3px 2px rgba(0, 0, 0, 0.034),
+            0 7px 5px rgba(0, 0, 0, 0.048),
+            0 13px 10px rgba(0, 0, 0, 0.06),
+            0 22px 18px rgba(0, 0, 0, 0.072),
+            0 42px 33px rgba(0, 0, 0, 0.086),
+            0 100px 80px rgba(0, 0, 0, 0.12);
+
+    animation: painting 3s 1 paused 0s forwards;
+}
+
+/*===============================================TOMA SECTION==========================================================*/
+
+.toma {
+    width: 30vh;
+    height: 40vh;
+    border-radius: 5px;
+
+    background-image: url("Assets/Paint_portraits/Toma.JPG");
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    margin: 5vh;
+
+    opacity: 0;
+    background-position: center;
+
+    box-shadow:
+            0 3px 2px rgba(0, 0, 0, 0.034),
+            0 7px 5px rgba(0, 0, 0, 0.048),
+            0 13px 10px rgba(0, 0, 0, 0.06),
+            0 22px 18px rgba(0, 0, 0, 0.072),
+            0 42px 33px rgba(0, 0, 0, 0.086),
+            0 100px 80px rgba(0, 0, 0, 0.12);
+
+    animation: painting 3s 1 paused 0s forwards;
+}
+
+/*===============================================QUEEN SECTION=========================================================*/
+
+.queen {
+    width: 30vh;
+    height: 40vh;
+    border-radius: 5px;
+
+    background-image: url("Assets/Paint_portraits/Queen.JPG");
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    margin: 5vh;
+
+    opacity: 0;
+    background-position: center;
+
+    box-shadow:
+            0 3px 2px rgba(0, 0, 0, 0.034),
+            0 7px 5px rgba(0, 0, 0, 0.048),
+            0 13px 10px rgba(0, 0, 0, 0.06),
+            0 22px 18px rgba(0, 0, 0, 0.072),
+            0 42px 33px rgba(0, 0, 0, 0.086),
+            0 100px 80px rgba(0, 0, 0, 0.12);
+
+    animation: painting 3s 1 paused 0s forwards;
+}
+
+/*===============================================MOM SECTION===========================================================*/
+
+.mom {
+    width: 30vh;
+    height: 40vh;
+    border-radius: 5px;
+
+    background-image: url("Assets/Paint_portraits/Mom.JPG");
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    margin: 5vh;
+
+    opacity: 0;
+    background-position: center;
+
+    box-shadow:
+            0 3px 2px rgba(0, 0, 0, 0.034),
+            0 7px 5px rgba(0, 0, 0, 0.048),
+            0 13px 10px rgba(0, 0, 0, 0.06),
+            0 22px 18px rgba(0, 0, 0, 0.072),
+            0 42px 33px rgba(0, 0, 0, 0.086),
+            0 100px 80px rgba(0, 0, 0, 0.12);
+
+    animation: painting 3s 1 paused 0s forwards;
+}
+
+/*===============================================MARINA SECTION========================================================*/
+
+.marina {
+    width: 30vh;
+    height: 40vh;
+    border-radius: 5px;
+
+    background-image: url("Assets/Paint_portraits/Marina.JPG");
+    background-repeat: no-repeat;
+    background-size: 31vh 41vh;
+    background-position: center;
+
+    margin: 5vh;
+
+    opacity: 0;
+
+    box-shadow:
+            0 3px 2px rgba(0, 0, 0, 0.034),
+            0 7px 5px rgba(0, 0, 0, 0.048),
+            0 13px 10px rgba(0, 0, 0, 0.06),
+            0 22px 18px rgba(0, 0, 0, 0.072),
+            0 42px 33px rgba(0, 0, 0, 0.086),
+            0 100px 80px rgba(0, 0, 0, 0.12);
+
+    animation: painting 3s 1 paused 0s forwards;
+}
+
+@keyframes painting {
+    0%{
+        opacity: 0;
+        transform: translate(0, 5vh);
+    }
+    100%{
+        opacity: 1;
+    }
+}
 
 
 

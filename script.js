@@ -91,4 +91,36 @@ window.addEventListener('scroll',
                 animation_elements_third_page[i].style.animation = null;
             }
         }
+
+        let alex = document.getElementById('alex');
+        let denis = document.getElementById('denis');
+        let toma = document.getElementById('toma');
+        let queen = document.getElementById('queen');
+        let mom = document.getElementById('mom');
+        let marina = document.getElementById('marina');
+
+        let elements = [
+            alex,
+            denis,
+            toma,
+            queen,
+            mom,
+            marina
+        ]
+
+        for (let i = 0; i < elements.length; i++) {
+
+            let distance = elements[i].getBoundingClientRect().top;
+
+            if (window.innerHeight * .6 > distance) {
+                elements[i].style.animationDelay = (i % 3) * .25 + "s";
+                elements[i].style.animationPlayState = "running";
+            }
+
+            if (-window.innerHeight > distance || window.innerHeight * 1.5 < distance) {
+                elements[i].style.animation = 'none';
+                elements[i].offsetHeight;
+                elements[i].style.animation = null;
+            }
+        }
     });
