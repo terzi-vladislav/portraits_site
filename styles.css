@@ -6,6 +6,10 @@ body {
     font-family: Helvetica Neue;
 }
 
+/*=====================================================================================================================*/
+/*===============================================FIRST PAGE 1==========================================================*/
+/*=====================================================================================================================*/
+
 /*===============================================HEADER SECTION==========================================================*/
 
 .portraits {
@@ -15,7 +19,6 @@ body {
     line-height: 12vh;
     color: #000000;
 
-    margin-top: 7vh;
     margin-bottom: 0;
     margin-left: 2vw;
 
@@ -416,6 +419,10 @@ body {
     }
 }
 
+/*=====================================================================================================================*/
+/*===============================================SECOND PAGE 3=========================================================*/
+/*=====================================================================================================================*/
+
 /*===============================================SPLASH SECTION==========================================================*/
 
 .splash {
@@ -751,4 +758,175 @@ body {
     }
 }
 
-/*===============================================PORTRAITS SECTION==========================================================*/
+/*=====================================================================================================================*/
+/*===============================================THIRD PAGE 3==========================================================*/
+/*=====================================================================================================================*/
+
+/*===============================================PHOTO SECTION==========================================================*/
+
+#third_page {
+    display: flex;
+    position: relative;
+}
+
+.jenya_photo {
+    width: 52.5vh;
+    height: 70vh;
+
+    background-image: url("Assets/Photos/Jenya.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    margin: 0;
+
+    opacity: 0;
+
+    position: absolute;
+    background-position: center;
+
+    box-shadow:
+            0 3px 2px rgba(0, 0, 0, 0.034),
+            0 7px 5px rgba(0, 0, 0, 0.048),
+            0 13px 10px rgba(0, 0, 0, 0.06),
+            0 22px 18px rgba(0, 0, 0, 0.072),
+            0 42px 33px rgba(0, 0, 0, 0.086),
+            0 100px 80px rgba(0, 0, 0, 0.12);
+
+    filter: grayscale(100%);
+
+    animation: photo 3s 1 paused 0s forwards;
+}
+
+@keyframes photo {
+    0%{
+        opacity: 0;
+
+        top: 10vh;
+        left: 50vw;
+    }
+    50%{
+        background-size: 52.5vh 70vh;
+
+        opacity: 1;
+
+        top: 10vh;
+        left: 47.5vw;
+    }
+    100%{
+        background-size: 117vh 156vh;
+        background-position: 66% 27%;
+
+        opacity: 1;
+
+        top: 10vh;
+        left: 47.5vw;
+    }
+}
+
+@media all and (max-device-aspect-ratio: 1/1) {
+    .jenya_photo {
+        margin-top: 20vh;
+
+        width: 100vw;
+        height: 133.33vw;
+    }
+
+    @keyframes photo {
+        0%{
+            opacity: 0;
+        }
+        50%{
+            background-size: 100vw 133.33vw;
+
+            opacity: 1;
+        }
+        100%{
+            background-size: 222.85vw 297.14vw;
+            background-position: 66% 27%;
+
+            opacity: 1;
+        }
+    }
+}
+
+/*===============================================MAIN PORTRAIT SECTION=====================================================*/
+
+.main_painting {
+    width: 52.5vh;
+    height: 70vh;
+
+    background-image: url("Assets/Paint_portraits/Jenya.JPG");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    margin: 0;
+
+    opacity: 0;
+
+    position: absolute;
+
+    box-shadow:
+            0 3px 2px rgba(0, 0, 0, 0.034),
+            0 7px 5px rgba(0, 0, 0, 0.048),
+            0 13px 10px rgba(0, 0, 0, 0.06),
+            0 22px 18px rgba(0, 0, 0, 0.072),
+            0 42px 33px rgba(0, 0, 0, 0.086),
+            0 100px 80px rgba(0, 0, 0, 0.12);
+
+    animation: main_painting 3s 1 paused 3s forwards;
+}
+
+@keyframes main_painting {
+    0%{
+        opacity: 0;
+
+        top: 10vh;
+        left: 47.5vw;
+    }
+    50%{
+        opacity: 1;
+
+        top: 10vh;
+        left: 47.5vw;
+    }
+    100%{
+        opacity: 1;
+
+        top: 20vh;
+        left: calc(52.5vw - 52.5vh);
+    }
+}
+
+@media all and (max-device-aspect-ratio: 1/1) {
+    .main_painting {
+        margin-top: 20vh;
+
+        width: 100vw;
+        height: 133.33vw;
+    }
+
+    @keyframes main_painting {
+        0%{
+            opacity: 0;
+        }
+        100%{
+            opacity: 1;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
