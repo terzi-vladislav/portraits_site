@@ -795,11 +795,14 @@ body {
 
     filter: grayscale(100%);
 
+    background-size: 52.5vh 70vh;
+
     animation: photo 3s 1 paused 0s forwards;
 }
 
 @keyframes photo {
     0%{
+        background-size: 52.5vh 70vh;
         opacity: 0;
 
         top: 10vh;
