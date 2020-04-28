@@ -28,12 +28,16 @@ window.addEventListener('scroll',
         let stroke = document.getElementById("stroke");
         let first_accent = document.getElementById("first_accent");
         let second_accent = document.getElementById("second_accent");
+        let watercolor_1 = document.getElementById("watercolor_1");
+        let watercolor_2 = document.getElementById("watercolor_2");
         let distanceToTop = stroke.getBoundingClientRect().top;
         if (window.innerHeight * 1.2 > distanceToTop) {
             hand.style.animationPlayState = "running";
             stroke.style.animationPlayState = "running";
             first_accent.style.animationPlayState = "running";
             second_accent.style.animationPlayState = "running";
+            watercolor_1.style.animationPlayState = "running";
+            watercolor_2.style.animationPlayState = "running";
         }
         if (0 > distanceToTop || window.innerHeight * 1.8 < distanceToTop) {
             hand.style.animation = 'none';
@@ -48,5 +52,11 @@ window.addEventListener('scroll',
             second_accent.style.animation = 'none';
             second_accent.offsetHeight;
             second_accent.style.animation = null;
+            watercolor_1.style.animation = 'none';
+            watercolor_1.offsetHeight;
+            watercolor_1.style.animation = null;
+            watercolor_2.style.animation = 'none';
+            watercolor_2.offsetHeight;
+            watercolor_2.style.animation = null;
         }
     });

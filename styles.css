@@ -415,6 +415,40 @@ body {
     }
 }
 
+@media all and (max-device-aspect-ratio: 1/1) {
+    .hand {
+        animation: ipad_hand_animation 2s 1 paused 0s forwards;
+    }
+
+    @keyframes ipad_hand_animation {
+        0%{
+            right: 0;
+            opacity: 0;
+            transform: scale(1.4);
+        }
+        100%{
+            right: 40vw;
+            opacity: 1;
+            transform: scale(1);
+        }
+    }
+
+    .brush_stroke {
+        animation: ipad_stroke 2s 1 paused 0s forwards;
+    }
+
+    @keyframes ipad_stroke {
+        0%{
+            width: 0;
+            opacity: 0;
+        }
+        100%{
+            width: 42vw;
+            opacity: 1;
+        }
+    }
+}
+
 @media all and (max-width: 425px) {
 
     .hand {
@@ -503,5 +537,74 @@ body {
     100%{
         opacity: 100;
         transform: translate(1vw, 0);
+    }
+}
+
+.watercolor {
+    font-family: Helvetica Neue;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 8vh;
+    line-height: 9vh;
+    text-align: left;
+    width: calc(50vw - 2vh);
+    position: absolute;
+    color: #000000;
+    left: 2vh;
+    bottom: 5vh;
+    opacity: 0;
+}
+
+.watercolor_1 {
+    animation: water_1 2s 1 paused 2s forwards;
+}
+
+.watercolor_2 {
+    animation: water_2 2s 1 paused 2.25s forwards;
+}
+
+@keyframes water_1 {
+
+    0%{
+        opacity: 0;
+        transform: translate(5vw, -100%);
+    }
+    100%{
+        opacity: 1;
+        transform: translate(0, -100%);
+    }
+}
+
+@keyframes water_2 {
+
+    0%{
+        opacity: 0;
+        transform: translate(5vw, 0);
+    }
+    100%{
+        opacity: 100;
+        transform: translate(0vw, 0);
+    }
+}
+
+@media all and (max-device-aspect-ratio: 1/1) {
+    .watercolor {
+        width: 35vw;
+        font-size: 4vh;
+        line-height: 5vh;
+        bottom: 3vh;
+    }
+}
+
+@media all and (max-width: 425px) {
+    .watercolor {
+        font-size: 6vh;
+        line-height: 7vh;
+        text-align: right;
+        left: -75vw;
+        height: 8vh;
+        top: 13vh;
+        width: 80vw;
+        opacity: 0;
     }
 }
