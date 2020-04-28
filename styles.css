@@ -1,19 +1,24 @@
+/*===============================================BODY SECTION==========================================================*/
 body {
     background: linear-gradient(#E2E2E2, #FFFFFF);
     margin: 0;
     padding: 0;
+    font-family: Helvetica Neue;
 }
 
+/*===============================================HEADER SECTION==========================================================*/
+
 .portraits {
-    font-family: Helvetica Neue;
     font-style: normal;
     font-weight: bold;
     font-size: 11vh;
     line-height: 12vh;
     color: #000000;
+
     margin-top: 7vh;
     margin-bottom: 0;
     margin-left: 2vw;
+
     animation: appearing_header 3s;
 }
 
@@ -22,7 +27,6 @@ body {
 }
 
 @keyframes appearing_header {
-
     0%{
         opacity: 0;
     }
@@ -32,7 +36,6 @@ body {
 }
 
 @media all and (max-device-aspect-ratio: 1/1) {
-
     .portraits {
         font-size: 7vh;
         line-height: 8vh;
@@ -41,105 +44,114 @@ body {
 }
 
 @media all and (max-width: 375px) {
-
     .portraits {
         font-size: 6vh;
         line-height: 7vh;
     }
 }
 
+/*===============================================LINE SECTION==========================================================*/
+
 .line {
     width: 70vw;
     height: 0.25vh;
     background-color: #000000;
+
     position:absolute;
     left: 0;
+
     animation: moving_line 3s ease-out;
 }
 
 @keyframes moving_line {
-
     0%{
-        transform: translate(-5.34vh, 0);
         opacity: 0;
+
         left: -70%;
+        transform: translate(-5.34vh, 0);
     }
     100%{
-        transform: translate(0, 0);
-        opacity: 100%;
+        opacity: 1;
+
         left: 0;
+        transform: translate(0, 0);
     }
 }
 
 @media all and (max-device-aspect-ratio: 1/1) {
-
     .line {
         width: 55vw;
     }
 
     @keyframes moving_line {
-
         0%{
-            transform: translate(-5.34vh, 0);
             opacity: 0;
+
             left: -55vw;
+            transform: translate(-5.34vh, 0);
         }
         100%{
-            transform: translate(0, 0);
-            opacity: 100%;
+            opacity: 1;
+
             left: 0;
+            transform: translate(0, 0);
         }
     }
 }
+
+/*===============================================PEN SECTION==========================================================*/
 
 .pen {
     width: 5.34vh;
     height: 70vh;
+
     background-image: url("Assets/Liner.png");
     background-repeat: no-repeat;
     background-size: contain;
+
     position: absolute;
     left: 70vw;
     transform-origin: top center;
-    animation: moving_pen 3s ease-out 1 normal 0s forwards;
     overflow: hidden;
+
+    animation: moving_pen 3s ease-out 1 normal 0s forwards;
 }
 
 @keyframes moving_pen {
-
     0%{
         opacity: 0;
-        transform: translate(-2.67vh, 0) rotate(30deg);
+
         left: -5.34vh;
+        transform: translate(-2.67vh, 0) rotate(30deg);
     }
     100%{
-        opacity: 100%;
-        transform: translate(-2.67vh, 0) rotate(-30deg);
+        opacity: 1;
+
         left: 70vw;
+        transform: translate(-2.67vh, 0) rotate(-30deg);
     }
 }
 
 @media all and (max-width: 768px) {
 
     @keyframes moving_pen {
-
         0%{
             opacity: 0;
-            transform: translate(-2.67vh, 0) rotate(30deg);
+
             left: -5.34vh;
+            transform: translate(-2.67vh, 0) rotate(30deg);
         }
         100%{
-            opacity: 100%;
-            transform: translate(-2.67vh, 0) rotate(-20deg);
+            opacity: 1;
+
             left: 70vw;
+            transform: translate(-2.67vh, 0) rotate(-20deg);
         }
     }
 }
 
 @media all and (max-device-aspect-ratio: 1/1) {
-
     @keyframes moving_pen {
-
         0%{
             opacity: 0;
             transform: translate(-2.67vh, 0) rotate(30deg);
@@ -154,108 +166,126 @@ body {
 }
 
 @media all and (max-device-aspect-ratio: 1/1) and (max-width: 425px){
-
     @keyframes moving_pen {
-
         0%{
             opacity: 0;
-            transform: translate(-2.67vh, 0) rotate(30deg);
+
             left: -5.34vh;
+            transform: translate(-2.67vh, 0) rotate(30deg);
         }
         100%{
             opacity: 100%;
-            transform: translate(-2.67vh, 0) rotate(-20deg);
+
             left: 55vw;
+            transform: translate(-2.67vh, 0) rotate(-20deg);
         }
     }
 }
 
 @media all and (max-width: 375px) {
-
     @keyframes moving_pen {
-
         0%{
             opacity: 0;
-            transform: translate(-2.67vh, 0) rotate(30deg);
+
             left: -5.34vh;
+            transform: translate(-2.67vh, 0) rotate(30deg);
         }
         100%{
             opacity: 100%;
-            transform: translate(-2.67vh, 0) rotate(-15deg);
+
             left: 55vw;
+            transform: translate(-2.67vh, 0) rotate(-15deg);
         }
     }
 }
 
+/*===============================================PEN TEXT SECTION==========================================================*/
+
 .precise {
-    font-family: Helvetica Neue;
     font-style: normal;
     font-weight: bold;
     font-size: 4vh;
     line-height: 5.34vh;
+
+    width: 45vh;
+
     color: #E2E2E2;
     opacity: 0;
-    width: 45vh;
+
     transform-origin: top left;
     transform: rotate(90deg) translate(25vh, -5.7vh);
+
     animation: appearing_header 1s 1 normal 2s forwards;
 }
 
-.description {
-    width: 30vw;
-    font-family: Helvetica Neue;
+/*===============================================DESCRIPTION 1 SECTION==========================================================*/
+
+.description1 {
     font-style: normal;
     font-weight: bold;
     font-size: 5vh;
     line-height: 6vh;
+
     color: #000000;
     opacity: 0;
+
+    width: 30vw;
+
     margin-left: 2vw;
-    animation: appearing_header 2s 1 normal 1s forwards;
+
     position: absolute;
     top: 50%;
     transform: translate(0, -50%);
+
+    animation: appearing_header 2s 1 normal 1s forwards;
 }
 
 @media all and (max-width: 768px) {
 
-    .description {
+    .description1 {
         width: 40vw;
     }
 }
 
 @media all and (max-device-aspect-ratio: 1/1) {
 
-    .description {
-        width: 50vw;
+    .description1 {
         font-size: 5vh;
         line-height: 6vh;
+
+        width: 50vw;
     }
 }
 
 @media all and (max-width: 425px) {
 
-    .description {
-        width: 50vw;
+    .description1 {
         font-size: 4vh;
         line-height: 5vh;
+
+        width: 50vw;
+
         transform: translate(0, -80%);
     }
 }
 
+/*===============================================FINEST SECTION==========================================================*/
+
 .finest {
-    font-family: Helvetica Neue;
     font-style: normal;
     font-weight: bold;
     font-size: 8vh;
     line-height: 9vh;
     text-align: right;
+
     width: 40vw;
-    position: absolute;
+
     color: #000000;
+    opacity: 0;
+
+    position: absolute;
     top: 65vh;
     right: 23vw;
-    opacity: 0;
 }
 
 .first {
@@ -264,6 +294,7 @@ body {
 
 .second {
     color: #FFC700;
+
     animation: finest_appear_2 2s 1 normal 3.25s forwards;
 }
 
@@ -275,10 +306,12 @@ body {
 
     0%{
         opacity: 0;
+
         transform: translate(-5vw, -100%);
     }
     100%{
         opacity: 1;
+
         transform: translate(0, -100%);
     }
 }
@@ -287,10 +320,12 @@ body {
 
     0%{
         opacity: 0;
+
         transform: translate(-5vw, 0);
     }
     100%{
-        opacity: 100;
+        opacity: 1;
+
         transform: translate(1vw, 0);
     }
 }
@@ -299,10 +334,12 @@ body {
 
     0%{
         opacity: 0;
+
         transform: translate(-5vw, 100%);
     }
     100%{
-        opacity: 100;
+        opacity: 1;
+
         transform: translate(2vw, 100%);
     }
 }
@@ -310,35 +347,43 @@ body {
 @media all and (max-device-aspect-ratio: 1/1) {
 
     .finest {
-        top: 70vh;
-        right: 30%;
         font-size: 6vh;
         line-height: 7vh;
+
+        top: 70vh;
+        right: 30%;
     }
 }
 
 @media all and (max-width: 425px) {
 
     .finest {
-        top: 70vh;
-        right: 30%;
         font-size: 5vh;
         line-height: 6vh;
+
+        top: 70vh;
+        right: 30%;
     }
 }
 
+/*===============================================CAP IMG SECTION==========================================================*/
+
 .cap {
-    top: 60vh;
-    margin: 0px;
     width: 5vh;
     height: 16.4vh;
-    right: calc(23vw + 4 * 6vh);
+
     background-image: url("Assets/Cap.png");
     background-repeat: no-repeat;
     background-size: contain;
-    position: absolute;
     opacity: 0;
+
+    margin: 0px;
+
+    position: absolute;
+    right: calc(23vw + 4 * 6vh);
+    top: 60vh;
     transform: rotate(200deg) scale(1.2);
+
     animation: cap_animation 1s 1 normal 3.5s forwards;
 }
 
@@ -361,57 +406,96 @@ body {
 @keyframes cap_animation {
     0%{
         opacity: 0;
+
         transform: rotate(190deg) scale(1.2);
     }
     100%{
         opacity: 100;
+
         transform: rotate(200deg) scale(1);
     }
 }
 
+/*===============================================SPLASH SECTION==========================================================*/
+
+.splash {
+    width: 55vw;
+    height: 100vh;
+
+    background-image: url("Assets/Splash.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    opacity: 0;
+    position: absolute;
+
+    top: 100vh;
+    right: 2vw;
+
+    animation: splash_animation 0.5s 1 paused 2s forwards;
+}
+
+@keyframes splash_animation {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+@media all and (max-device-aspect-ratio: 4/3) {
+
+    .splash {
+        top: 120vh;
+    }
+}
+
+@media all and (max-device-aspect-ratio: 1/1) {
+
+    .splash {
+        width: 88vw;
+
+        top: 103vh;
+    }
+}
+
+@media all and (max-width: 425px) {
+
+    .splash {
+        display: none;
+    }
+}
+
+/*===============================================HAND SECTION==========================================================*/
+
 .hand {
     height: 70vh;
     width: 128.44vh;
+
     background-image: url("Assets/Hand.png");
     background-repeat: no-repeat;
     background-size: contain;
+    opacity: 0;
+
     position: absolute;
     top: 120vh;
-    opacity: 0;
     transform-origin: bottom right;
+
     animation: hand_animation 2s 1 paused 0s forwards;
 }
 
 @keyframes hand_animation {
     0%{
-        left: 0;
         opacity: 0;
+
+        left: 0;
         transform: scale(1.4);
     }
     100%{
+        opacity: 1;
+
         left: calc(-128.44vh + 50vw);
-        opacity: 1;
         transform: scale(1);
-    }
-}
-
-.brush_stroke {
-    right: 0;
-    height: .7vh;
-    background-color: #000000;
-    position:absolute;
-    top: calc(120vh + 70vh - .8vh);
-    animation: stroke_animation 2s 1 paused 0s forwards;
-}
-
-@keyframes stroke_animation {
-    0%{
-        width: calc(100vw - 128.44vh);
-        opacity: 0;
-    }
-    100%{
-        width: 50.5vw;
-        opacity: 1;
     }
 }
 
@@ -422,17 +506,69 @@ body {
 
     @keyframes ipad_hand_animation {
         0%{
-            right: 0;
             opacity: 0;
+
+            right: 0;
             transform: scale(1.4);
         }
         100%{
-            right: 40vw;
             opacity: 1;
+
+            right: 40vw;
             transform: scale(1);
         }
     }
+}
 
+@media all and (max-width: 425px) {
+    .hand {
+        animation: short_hand_animation 2s 1 paused 0s forwards;
+    }
+
+    @keyframes short_hand_animation {
+        0%{
+            opacity: 0;
+
+            right: 0;
+            transform: scale(1.4);
+        }
+        100%{
+            opacity: 1;
+
+            right: 10vw;
+            transform: scale(1);
+        }
+    }
+}
+
+/*===============================================STROKE SECTION==========================================================*/
+
+.brush_stroke {
+    height: .7vh;
+
+    background-color: #000000;
+
+    position:absolute;
+    right: 0;
+    top: calc(120vh + 70vh - .8vh);
+
+    animation: stroke_animation 2s 1 paused 0s forwards;
+}
+
+@keyframes stroke_animation {
+    0%{
+        width: calc(100vw - 128.44vh);
+
+        opacity: 0;
+    }
+    100%{
+        width: 50.5vw;
+
+        opacity: 1;
+    }
+}
+
+@media all and (max-device-aspect-ratio: 1/1) {
     .brush_stroke {
         animation: ipad_stroke 2s 1 paused 0s forwards;
     }
@@ -440,34 +576,18 @@ body {
     @keyframes ipad_stroke {
         0%{
             width: 0;
+
             opacity: 0;
         }
         100%{
             width: 42vw;
+
             opacity: 1;
         }
     }
 }
 
 @media all and (max-width: 425px) {
-
-    .hand {
-        animation: short_hand_animation 2s 1 paused 0s forwards;
-    }
-
-    @keyframes short_hand_animation {
-        0%{
-            right: 0;
-            opacity: 0;
-            transform: scale(1.4);
-        }
-        100%{
-            right: 10vw;
-            opacity: 1;
-            transform: scale(1);
-        }
-    }
-
     .brush_stroke {
         animation: short_stroke 2s 1 paused 0s forwards;
     }
@@ -475,28 +595,34 @@ body {
     @keyframes short_stroke {
         0%{
             width: 0;
+
             opacity: 0;
         }
         100%{
             width: 12vw;
+
             opacity: 1;
         }
     }
 }
 
+/*===============================================ACCENTS SECTION==========================================================*/
+
 .accents {
-    font-family: Helvetica Neue;
     font-style: normal;
     font-weight: bold;
     font-size: 7vh;
     line-height: 7vh;
     text-align: right;
-    width: 40vw;
-    position: absolute;
+
     color: #E2E2E2;
+    opacity: 0;
+
+    width: 40vw;
+
+    position: absolute;
     right: 16vh;
     bottom: 27vh;
-    opacity: 0;
 }
 
 @media all and (max-width: 425px) {
@@ -508,51 +634,60 @@ body {
 
 .first_accent {
     color: #E2E2E2;
+
     animation: accent_1 2s 1 paused 2s forwards;
 }
 
 .second_accent {
     color: #FFC700;
+
     animation: accent_2 2s 1 paused 2.25s forwards;
 }
 
 @keyframes accent_1 {
-
     0%{
         opacity: 0;
+
         transform: translate(-5vw, -100%);
     }
     100%{
         opacity: 1;
+
         transform: translate(0, -100%);
     }
 }
 
 @keyframes accent_2 {
-
     0%{
         opacity: 0;
+
         transform: translate(-5vw, 0);
     }
     100%{
-        opacity: 100;
+        opacity: 1;
+
         transform: translate(1vw, 0);
     }
 }
 
+/*===============================================WATERCOLOR SECTION==========================================================*/
+
 .watercolor {
-    font-family: Helvetica Neue;
     font-style: normal;
     font-weight: bold;
     font-size: 8vh;
     line-height: 9vh;
     text-align: left;
+
     width: calc(50vw - 2vh);
-    position: absolute;
+
     color: #000000;
+
+    position: absolute;
+    opacity: 0;
+
     left: 2vh;
     bottom: 5vh;
-    opacity: 0;
 }
 
 .watercolor_1 {
@@ -564,34 +699,38 @@ body {
 }
 
 @keyframes water_1 {
-
     0%{
         opacity: 0;
+
         transform: translate(5vw, -100%);
     }
     100%{
         opacity: 1;
+
         transform: translate(0, -100%);
     }
 }
 
 @keyframes water_2 {
-
     0%{
         opacity: 0;
+
         transform: translate(5vw, 0);
     }
     100%{
-        opacity: 100;
+        opacity: 1;
+
         transform: translate(0vw, 0);
     }
 }
 
 @media all and (max-device-aspect-ratio: 1/1) {
     .watercolor {
-        width: 35vw;
         font-size: 4vh;
         line-height: 5vh;
+
+        width: 35vw;
+
         bottom: 3vh;
     }
 }
@@ -601,10 +740,15 @@ body {
         font-size: 6vh;
         line-height: 7vh;
         text-align: right;
+
+        opacity: 0;
+
+        width: 80vw;
+
         left: -75vw;
         height: 8vh;
         top: 13vh;
-        width: 80vw;
-        opacity: 0;
     }
 }
+
+/*===============================================PORTRAITS SECTION==========================================================*/
