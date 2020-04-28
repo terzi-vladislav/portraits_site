@@ -792,7 +792,7 @@ body {
             0 42px 33px rgba(0, 0, 0, 0.086),
             0 100px 80px rgba(0, 0, 0, 0.12);
 
-    filter: grayscale(100%);
+    /*filter: grayscale(100%);*/
 
     background-size: 52.5vh 70vh;
 
