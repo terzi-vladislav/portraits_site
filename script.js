@@ -71,7 +71,7 @@ window.addEventListener('scroll',
         }
 
         let janya_photo = document.getElementById('jenya_photo');
-        let main_painting = document.getElementById("main_painting");
+        let main_painting = document.getElementById("0");
         let animation_elements_third_page = [
             janya_photo,
             main_painting
@@ -92,12 +92,12 @@ window.addEventListener('scroll',
             }
         }
 
-        let alex = document.getElementById('alex');
-        let denis = document.getElementById('denis');
-        let toma = document.getElementById('toma');
-        let queen = document.getElementById('queen');
-        let mom = document.getElementById('mom');
-        let marina = document.getElementById('marina');
+        let alex = document.getElementById('1');
+        let denis = document.getElementById('2');
+        let toma = document.getElementById('3');
+        let queen = document.getElementById('4');
+        let mom = document.getElementById('5');
+        let marina = document.getElementById('6');
 
         let elements = [
             alex,
@@ -115,78 +115,50 @@ window.addEventListener('scroll',
             if (window.innerHeight * .7 > distance) {
                 elements[i].style.animationDelay = (i % 3) * .25 + "s";
                 elements[i].style.animationPlayState = "running";
+                elements[i].addEventListener('animationend',
+                    () => {
+                        elements[i].style.opacity = "1";
+                        elements[i].style.animation = "none";
+                        elements[i].addEventListener('mouseover',
+                            () => {
+                                elements[i].style.transform = "scale(1.05)";
+                                elements[i].style.cursor = "pointer";
+                            })
+                        elements[i].addEventListener('mouseleave',
+                            () => {
+                                elements[i].style.transform = "scale(1)";
+                            })
+                    })
             }
 
             if (-window.innerHeight > distance || window.innerHeight * 1.5 < distance) {
+                elements[i].style.opacity = "0";
                 elements[i].style.animation = 'none';
                 elements[i].offsetHeight;
                 elements[i].style.animation = null;
+                elements[i].style.animation = "painting 2s 1 paused 0s forwards";
             }
         }
     });
 
-let clickable_photos = [
-    [
-        document.getElementById('alex'),
-        false
-    ],
-    [
-        document.getElementById('denis'),
-        false
-    ],
-    [
-        document.getElementById('toma'),
-        false
-    ],
-    [
-        document.getElementById('queen'),
-        false
-    ],
-    [
-        document.getElementById('mom'),
-        false
-    ],
-    [
-        document.getElementById('marina'),
-        false
-    ],
-    [
-        document.getElementById('main_painting'),
-        false
-    ]
-];
+let clickable_photos = []
 
-// function AddHoverEvent(i) {
-//     hover_photos[i][0].addEventListener('mouseover',
-//         () => {
-//             hover_photos[i][0].style.animation = 'none';
-//             hover_photos[i][0].offsetHeight;
-//             hover_photos[i][0].style.animation = null;
-//             hover_photos[i][0].style.animation = "magnify 2s 1 normal forwards";
-//             hover_photos[i][0].style.cursor = "pointer";
-//         });
-// }
-//
-// let hover_photos = clickable_photos;
-//
+for (let i = 0; i < 7; i++) {
+    clickable_photos[i] = document.getElementById(i.toString());
+}
+
 for (let i = 0; i < clickable_photos.length; i++) {
-    clickable_photos[i][0].addEventListener('click',
+    clickable_photos[i].addEventListener('click',
         () =>
         {
-            clickable_photos[i][1] = true;
+            showPhotoFullscreen(i);
         });
 }
 
-// for (let i = 0; i < hover_photos.length; i++) {
-//     clickable_photos[i][0].addEventListener('animationend',
-//         () =>
-//         {
-//             AddHoverEvent(i);
-//         });
-// }
-
-function showPhotoFullscreen() {
-    let modal = document.getElementsByClassName('jenya_popup')[0];
+function showPhotoFullscreen(i) {
+    let photo = document.getElementById('image_popup');
+    photo.style.backgroundImage = "url(Assets/Paint_portraits/" + i + ".JPG)";
+    let modal = document.getElementsByClassName('popup')[0];
     modal.style.display = "flex";
     modal.style.animation = "popup_animation 1s forwards";
 
@@ -195,9 +167,3 @@ function showPhotoFullscreen() {
     }
 }
 
-let main_photo = document.getElementById('main_painting');
-
-main_photo.addEventListener('click',
-    () => {
-        showPhotoFullscreen();
-    });

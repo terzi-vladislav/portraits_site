@@ -1,9 +1,82 @@
+/*=================================================ёбнулись============================================================*/
+
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+*, *:before, *:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+:focus, :active {
+    outline: none;
+}
+
+a:focus, a:active {
+    outline: none;
+}
+
+a, a:visited, a:hover {
+    text-decoration: none;
+}
+
+nav, footer, header, aside {
+    display: block;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    line-height: 1;
+    font-size: 14px;
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {
+    font-family: inherit;
+}
+
+input::-ms-clear {
+    display: none;
+}
+
+button {
+    cursor: pointer;
+}
+
+button::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+}
+
+ul li {
+    list-style: none;
+}
+
+img {
+    vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-size: inherit;
+    font-weight: 400;
+}
+
 /*===============================================BODY SECTION==========================================================*/
+html {
+    height: auto;
+}
+
 body {
     background: linear-gradient(#E2E2E2, #FFFFFF);
-    margin: 0;
-    padding: 0;
     font-family: Helvetica Neue;
+    overflow-x: hidden;
 }
 
 /*=====================================================================================================================*/
@@ -860,7 +933,7 @@ body {
     height: 70vh;
     border-radius: 10px;
 
-    background-image: url("Assets/Paint_portraits/Jenya.JPG");
+    background-image: url("Assets/Paint_portraits/0.JPG");
     background-repeat: no-repeat;
     background-size: cover;
 
@@ -920,9 +993,13 @@ body {
     }
 }
 
+.main_painting:hover {
+    cursor: pointer;
+}
+
 /*===============================================POPUP SECTION==========================================================*/
 
-.jenya_popup {
+.popup {
     width: 100%;
     height: 100%;
 
@@ -985,7 +1062,7 @@ body {
     }
 }
 
-.jenya_popup img {
+#image_popup {
     width: 60vh;
     height: 80vh;
     border-radius: 10px;
@@ -1031,9 +1108,9 @@ body {
 .alex {
     width: 30vh;
     height: 40vh;
-    border-radius: 5px;
+    border-radius: 2vh;
 
-    background-image: url("Assets/Paint_portraits/Lyousha.JPG");
+    background-image: url("Assets/Paint_portraits/1.JPG");
     background-repeat: no-repeat;
     background-size: contain;
 
@@ -1043,43 +1120,46 @@ body {
     background-position: center;
 
     box-shadow: 0 3px 2px rgba(0, 0, 0, 0.034),
-    0 7px 5px rgba(0, 0, 0, 0.048),
-    0 13px 10px rgba(0, 0, 0, 0.06),
-    0 22px 18px rgba(0, 0, 0, 0.072),
-    0 42px 33px rgba(0, 0, 0, 0.086),
-    0 100px 80px rgba(0, 0, 0, 0.12);
+        0 7px 5px rgba(0, 0, 0, 0.048),
+        0 13px 10px rgba(0, 0, 0, 0.06),
+        0 22px 18px rgba(0, 0, 0, 0.072),
+        0 42px 33px rgba(0, 0, 0, 0.086),
+        0 100px 80px rgba(0, 0, 0, 0.12)
+    ;
 
     animation: painting 2s 1 paused 0s forwards;
+
+    transition: all 1s;
 }
 
 /*===============================================DENIS SECTION=========================================================*/
 
 .denis {
-    background-image: url("Assets/Paint_portraits/Denis.JPG");
+    background-image: url("Assets/Paint_portraits/2.JPG");
 }
 
 /*===============================================TOMA SECTION==========================================================*/
 
 .toma {
-    background-image: url("Assets/Paint_portraits/Toma.JPG");
+    background-image: url("Assets/Paint_portraits/3.JPG");
 }
 
 /*===============================================QUEEN SECTION=========================================================*/
 
 .queen {
-    background-image: url("Assets/Paint_portraits/Queen.JPG");
+    background-image: url("Assets/Paint_portraits/4.JPG");
 }
 
 /*===============================================MOM SECTION===========================================================*/
 
 .mom {
-    background-image: url("Assets/Paint_portraits/Mom.JPG");
+    background-image: url("Assets/Paint_portraits/5.JPG");
 }
 
 /*===============================================MARINA SECTION========================================================*/
 
 .marina {
-    background-image: url("Assets/Paint_portraits/Marina.JPG");
+    background-image: url("Assets/Paint_portraits/6.JPG");
 }
 
 @keyframes painting {
