@@ -282,52 +282,6 @@ body {
     }
 }
 
-.pen2 {
-    opacity: 0;
-
-    left: 70vw;
-
-    animation: none;
-
-    transform: translate(-2.67vh, 0) rotate(-30deg);
-
-    animation: moving_pen2 1s ease-out 1 normal 3s forwards;
-}
-
-@keyframes moving_pen2 {
-    0%{
-        opacity: 0;
-
-        transform: translate(-2.67vh, 0) rotate(-30deg);
-    }
-    100%{
-        opacity: 0.25;
-
-        transform: translate(-2.67vh, 0) rotate(-35deg);
-    }
-}
-
-.pen3 {
-    opacity: 0;
-
-    left: 70vw;
-
-    animation: moving_pen3 1.5s ease-out 1 normal 3s forwards;
-}
-
-@keyframes moving_pen3 {
-    0%{
-        opacity: 0;
-
-        transform: translate(-2.67vh, 0) rotate(-30deg);
-    }
-    100%{
-        opacity: 0.1;
-
-        transform: translate(-2.67vh, 0) rotate(-40deg);
-    }
-}
-
 /*===============================================PEN TEXT SECTION==========================================================*/
 
 .precise {
