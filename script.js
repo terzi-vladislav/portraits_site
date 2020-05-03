@@ -1,111 +1,92 @@
 window.addEventListener('scroll',
     () => {
-        let portrait_text = document.getElementById('portrait_text');
-        let line = document.getElementById("line");
-        let pen = document.getElementById("pen");
-        let precise = document.getElementById("precise");
-        let description1 = document.getElementById("description1");
-        let cap = document.getElementById("cap");
-        let finest_first = document.getElementById("finest_first")
-        let finest_second = document.getElementById("finest_second")
-        let finest_third = document.getElementById("finest_third")
-
         let animation_elements_first_page = [
-            portrait_text,
-            line,
-            pen,
-            precise,
-            description1,
-            cap,
-            finest_first,
-            finest_second,
-            finest_third
+            document.getElementById('portrait_text'),
+            document.getElementById("line"),
+            document.getElementById("pen"),
+            document.getElementById("pen2"),
+            document.getElementById("pen3"),
+            document.getElementById("precise"),
+            document.getElementById("description1"),
+            document.getElementById("cap"),
+            document.getElementById("finest_third"),
+            document.getElementById("finest_second"),
+            document.getElementById("finest_third")
         ]
 
-        let distanceToTopForText = description1.getBoundingClientRect().top;
+        let distanceToTopForText = animation_elements_first_page[4].getBoundingClientRect().top;
+
         if (0 > distanceToTopForText) {
             for (let i = 0; i < animation_elements_first_page.length; i++) {
                 animation_elements_first_page[i].style.animationPlayState = "running";
             }
         }
 
-        if (-window.innerHeight > distanceToTopForText) {
-            for (let i = 0; i < animation_elements_first_page.length; i++) {
-                animation_elements_first_page[i].style.animation = 'none';
-                animation_elements_first_page[i].offsetHeight;
-                animation_elements_first_page[i].style.animation = null;
-            }
-        }
-
-        let hand = document.getElementById('hand');
-        let stroke = document.getElementById("stroke");
-        let first_accent = document.getElementById("first_accent");
-        let second_accent = document.getElementById("second_accent");
-        let watercolor_1 = document.getElementById("watercolor_1");
-        let watercolor_2 = document.getElementById("watercolor_2");
-        let splash = document.getElementById("splash")
+        // if (-window.innerHeight > distanceToTopForText) {
+        //     for (let i = 0; i < animation_elements_first_page.length; i++) {
+        //         animation_elements_first_page[i].style.animation = 'none';
+        //         animation_elements_first_page[i].offsetHeight;
+        //         animation_elements_first_page[i].style.animation = null;
+        //     }
+        // }
 
         let animation_elements_second_page = [
-            hand,
-            stroke,
-            first_accent,
-            second_accent,
-            watercolor_1,
-            watercolor_2,
-            splash
+            document.getElementById('hand'),
+            document.getElementById("stroke"),
+            document.getElementById("first_accent"),
+            document.getElementById("second_accent"),
+            document.getElementById("watercolor_1"),
+            document.getElementById("watercolor_2"),
+            document.getElementById("splash")
         ]
 
-        let distanceToTop = stroke.getBoundingClientRect().top;
+        let distanceToTop = animation_elements_second_page[1].getBoundingClientRect().top;
+
         if (window.innerHeight * 1.2 > distanceToTop) {
             for (let i = 0; i < animation_elements_second_page.length; i++) {
                 animation_elements_second_page[i].style.animationPlayState = "running";
             }
         }
 
-        if (0 > distanceToTop || window.innerHeight * 1.8 < distanceToTop) {
-            for (let i = 0; i < animation_elements_second_page.length; i++) {
-                animation_elements_second_page[i].style.animation = 'none';
-                animation_elements_second_page[i].offsetHeight;
-                animation_elements_second_page[i].style.animation = null;
-            }
-        }
+        // if (0 > distanceToTop || window.innerHeight * 1.8 < distanceToTop) {
+        //     for (let i = 0; i < animation_elements_second_page.length; i++) {
+        //         animation_elements_second_page[i].style.animation = 'none';
+        //         animation_elements_second_page[i].offsetHeight;
+        //         animation_elements_second_page[i].style.animation = null;
+        //     }
+        // }
 
-        let janya_photo = document.getElementById('jenya_photo');
-        let main_painting = document.getElementById("0");
         let animation_elements_third_page = [
-            janya_photo,
-            main_painting
+            document.getElementById('jenya_photo'),
+            document.getElementById("0")
         ]
 
-        let distanceFormPhotoToTop = janya_photo.getBoundingClientRect().top;
-        if (window.innerHeight / 2 > distanceFormPhotoToTop) {
-            for (let i = 0; i < animation_elements_third_page.length; i++) {
-                animation_elements_third_page[i].style.animationPlayState = "running";
-            }
-        }
+        for (let i = 0; i < animation_elements_third_page.length; i++) {
 
-        if (-window.innerHeight > distanceFormPhotoToTop || window.innerHeight * 1.5 < distanceFormPhotoToTop) {
-            for (let i = 0; i < animation_elements_third_page.length; i++) {
-                animation_elements_third_page[i].style.animation = 'none';
-                animation_elements_third_page[i].offsetHeight;
-                animation_elements_third_page[i].style.animation = null;
-            }
-        }
+            let distance = animation_elements_third_page[i].getBoundingClientRect().top;
 
-        let alex = document.getElementById('1');
-        let denis = document.getElementById('2');
-        let toma = document.getElementById('3');
-        let queen = document.getElementById('4');
-        let mom = document.getElementById('5');
-        let marina = document.getElementById('6');
+            if (window.innerHeight / 2 > distance) {
+                for (let i = 0; i < animation_elements_third_page.length; i++) {
+                    animation_elements_third_page[i].style.animationPlayState = "running";
+                }
+            }
+
+            // if (-window.innerHeight > distanceFormPhotoToTop || window.innerHeight * 1.5 < distanceFormPhotoToTop) {
+            //     for (let i = 0; i < animation_elements_third_page.length; i++) {
+            //         animation_elements_third_page[i].style.animation = 'none';
+            //         animation_elements_third_page[i].offsetHeight;
+            //         animation_elements_third_page[i].style.animation = null;
+            //     }
+            // }
+        }
 
         let elements = [
-            alex,
-            denis,
-            toma,
-            queen,
-            mom,
-            marina
+            document.getElementById("1"),
+            document.getElementById("2"),
+            document.getElementById("3"),
+            document.getElementById("4"),
+            document.getElementById("5"),
+            document.getElementById("6")
         ]
 
         for (let i = 0; i < elements.length; i++) {
@@ -121,23 +102,25 @@ window.addEventListener('scroll',
                         elements[i].style.animation = "none";
                         elements[i].addEventListener('mouseover',
                             () => {
+                                elements[i].style.transition = "1s";
                                 elements[i].style.transform = "scale(1.05)";
                                 elements[i].style.cursor = "pointer";
                             })
                         elements[i].addEventListener('mouseleave',
                             () => {
+                                elements[i].style.transition = "1s";
                                 elements[i].style.transform = "scale(1)";
                             })
                     })
             }
 
-            if (-window.innerHeight > distance || window.innerHeight * 1.5 < distance) {
-                elements[i].style.opacity = "0";
-                elements[i].style.animation = 'none';
-                elements[i].offsetHeight;
-                elements[i].style.animation = null;
-                elements[i].style.animation = "painting 2s 1 paused 0s forwards";
-            }
+            // if (-window.innerHeight > distance || window.innerHeight * 1.5 < distance) {
+            //     elements[i].style.opacity = "0";
+            //     elements[i].style.animation = 'none';
+            //     elements[i].offsetHeight;
+            //     elements[i].style.animation = null;
+            //     elements[i].style.animation = "painting 2s 1 paused 0s forwards";
+            // }
         }
     });
 

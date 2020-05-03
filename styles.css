@@ -1,4 +1,4 @@
-/*=================================================ёбнулись============================================================*/
+/*=================================================öбнулись============================================================*/
 
 * {
     padding: 0;
@@ -68,6 +68,13 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 400;
 }
 
+@font-face {
+    font-family: "Helvetica Neue";
+    src: url("Assets/HelveticaNeueCyr-Bold/HelveticaNeueCyr-Bold.ttf") format("ttf"),
+    url("Assets/HelveticaNeueCyr-Bold/HelveticaNeueCyr-Bold.woff") format("woff"),
+    url("Assets/HelveticaNeueCyr-Bold/HelveticaNeueCyr-Bold.woff2") format("woff2");
+}
+
 /*===============================================BODY SECTION==========================================================*/
 html {
     height: auto;
@@ -75,7 +82,7 @@ html {
 
 body {
     background: linear-gradient(#E2E2E2, #FFFFFF);
-    font-family: Helvetica Neue;
+    font-family: Helvetica Neue, "Helvetica Neue", Arial, sans-serif;
     overflow-x: hidden;
 }
 
@@ -136,7 +143,7 @@ body {
     position:absolute;
     left: 0;
 
-    animation: moving_line 3s ease-out;
+    animation: moving_line 3s ease-in-out;
 }
 
 @keyframes moving_line {
@@ -190,7 +197,7 @@ body {
     transform-origin: top center;
     overflow: hidden;
 
-    animation: moving_pen 3s ease-out 1 normal 0s forwards;
+    animation: moving_pen 3s ease-in-out 1 normal 0s forwards;
 }
 
 @keyframes moving_pen {
@@ -272,6 +279,52 @@ body {
             left: 55vw;
             transform: translate(-2.67vh, 0) rotate(-15deg);
         }
+    }
+}
+
+.pen2 {
+    opacity: 0;
+
+    left: 70vw;
+
+    animation: none;
+
+    transform: translate(-2.67vh, 0) rotate(-30deg);
+
+    animation: moving_pen2 1s ease-out 1 normal 3s forwards;
+}
+
+@keyframes moving_pen2 {
+    0%{
+        opacity: 0;
+
+        transform: translate(-2.67vh, 0) rotate(-30deg);
+    }
+    100%{
+        opacity: 0.25;
+
+        transform: translate(-2.67vh, 0) rotate(-35deg);
+    }
+}
+
+.pen3 {
+    opacity: 0;
+
+    left: 70vw;
+
+    animation: moving_pen3 1.5s ease-out 1 normal 3s forwards;
+}
+
+@keyframes moving_pen3 {
+    0%{
+        opacity: 0;
+
+        transform: translate(-2.67vh, 0) rotate(-30deg);
+    }
+    100%{
+        opacity: 0.1;
+
+        transform: translate(-2.67vh, 0) rotate(-40deg);
     }
 }
 
@@ -1117,6 +1170,7 @@ body {
     margin: 5vh;
 
     opacity: 0;
+
     background-position: center;
 
     box-shadow: 0 3px 2px rgba(0, 0, 0, 0.034),
@@ -1128,8 +1182,6 @@ body {
     ;
 
     animation: painting 2s 1 paused 0s forwards;
-
-    transition: all 1s;
 }
 
 /*===============================================DENIS SECTION=========================================================*/
@@ -1171,21 +1223,6 @@ body {
         opacity: 1;
     }
 }
-
-/*@keyframes magnify {*/
-/*    0%{*/
-/*        opacity: 1;*/
-/*        transform: scale(1);*/
-/*    }*/
-/*    50%{*/
-/*        opacity: 1;*/
-/*        transform: scale(1.1);*/
-/*    }*/
-/*    100%{*/
-/*        opacity: 1;*/
-/*        transform: scale(1);*/
-/*    }*/
-/*}*/
 
 #backgroundOverlay{
     background-color:transparent;
